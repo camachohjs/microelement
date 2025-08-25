@@ -1,0 +1,7 @@
+{
+    "name": "jesus/microelement",
+    "autoload": {
+        "psr-4": {"MicroElement\\": "microelement/"}
+    },
+    "require": {"php": ">=8.1"}
+}
