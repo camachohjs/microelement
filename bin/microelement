@@ -1,42 +1,29 @@
 #!/usr/bin/env php
 <?php
 
-// Intentamos cargar el autoload de varias rutas posibles
-// $autoloadFiles = [
-//     __DIR__ . '/../vendor/autoload.php',                      // instalación local
-//     __DIR__ . '/../../../autoload.php',                       // instalación como dependencia
-//     getenv('COMPOSER_HOME') . '/vendor/autoload.php',         // instalación global
-// ];
+Intentamos cargar el autoload de varias rutas posibles
+$autoloadFiles = [
+    __DIR__ . '/../vendor/autoload.php',                      // instalación local
+    __DIR__ . '/../../../autoload.php',                       // instalación como dependencia
+    getenv('COMPOSER_HOME') . '/vendor/autoload.php',         // instalación global
+];
 
-// $loaded = false;
-// foreach ($autoloadFiles as $file) {
-//     if ($file && file_exists($file)) {
-//         require $file;
-//         $loaded = true;
-//         break;
-//     }
-// }
+$loaded = false;
+foreach ($autoloadFiles as $file) {
+    if ($file && file_exists($file)) {
+        require $file;
+        $loaded = true;
+        break;
+    }
+}
 
-// if (!$loaded) {
-//     fwrite(STDERR, "No se pudo cargar autoload.php de Composer\n");
-//     exit(1);
-// }
-
-// use Microelement\Console\Application;
-
-
-// $app = new Application();
-// $app->run(); -->
-$autoload = getenv('COMPOSER_HOME') . '/vendor/autoload.php';
-
-if (!file_exists($autoload)) {
-    fwrite(STDERR, "No se pudo cargar el autoload global de Composer\n");
+if (!$loaded) {
+    fwrite(STDERR, "No se pudo cargar autoload.php de Composer\n");
     exit(1);
 }
 
-require $autoload;
-
 use Microelement\Console\Application;
 
+
 $app = new Application();
-$app->run();
+$app->run(); -->

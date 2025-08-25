@@ -14,7 +14,7 @@ class NewCommand extends Command
     protected function configure()
     {
         $this->setDescription('Crea un nuevo proyecto con Microelement')
-            ->addArgument('name', InputArgument::REQUIRED, 'Nombre del proyecto');
+             ->addArgument('name', InputArgument::REQUIRED, 'Nombre del proyecto');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
