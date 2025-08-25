@@ -1,5 +1,5 @@
 {
-    "name": "jesus/microelement",
+    "name": "microelement/microelement",
     "autoload": {
         "psr-4": {"MicroElement\\": "microelement/"}
     },
