@@ -1,7 +1,6 @@
 <?php
 $pharFile = 'microelement.phar';
 
-// Elimina PHAR previo
 if (file_exists($pharFile)) {
     unlink($pharFile);
 }
@@ -9,7 +8,6 @@ if (file_exists($pharFile)) {
 $phar = new Phar($pharFile);
 $phar->startBuffering();
 
-// Agrega todos los archivos del framework
 $directory = new RecursiveIteratorIterator(
     new RecursiveDirectoryIterator(__DIR__),
     RecursiveIteratorIterator::LEAVES_ONLY
@@ -22,9 +20,7 @@ foreach ($directory as $file) {
     }
 }
 
-// Define el punto de entrada
 $phar->setStub($phar->createDefaultStub('bin/microelement'));
-
 $phar->stopBuffering();
 
 echo "✅ microelement.phar generado correctamente.\n";
