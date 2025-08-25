@@ -1,9 +1,15 @@
 {
     "name": "microelement/microelement",
-    "description": "Microframework PHP ligero con Blade y Livewire",
-    "version": "1.1.0",
-    "autoload": {
-        "psr-4": {"MicroElement\\": "microelement/"}
-    },
-    "require": {"php": ">=8.1"}
+    "description": "Microframework PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jesús Sánchez",
+            "email": "tu-correo@example.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    }
 }
