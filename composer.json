@@ -8,6 +8,11 @@
             "Microelement\\": "src/"
         }
     },
+    "autoload-dev":{
+        "prs-4":{
+            "microelement\\Tests": "tests/"
+        }
+    },
     "bin": [
         "bin/microelement"
     ],
