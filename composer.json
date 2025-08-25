@@ -1,18 +1,18 @@
 {
     "name": "microelement/microelement",
-    "description": "Microframework PHP",
+    "description": "Microelement CLI tool",
     "type": "library",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Jesús Sánchez",
-            "email": "tu-correo@example.com"
+    "autoload": {
+        "psr-4": {
+            "Microelement\\": "src/"
         }
+    },
+    "bin": [
+        "bin/microelement"
     ],
     "require": {
-        "php": ">=8.1"
-    },
-    "bin":[
-        "bin/microelement"
-    ]
+        "php": ">=8.0",
+        "symfony/console": "^6.0"
+    }
 }
