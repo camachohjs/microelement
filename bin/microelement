@@ -24,5 +24,6 @@ if (!$loaded) {
 
 use Microelement\Console\Application;
 
+
 $app = new Application();
 $app->run();

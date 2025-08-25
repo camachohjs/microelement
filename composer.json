@@ -1,6 +1,6 @@
 {
     "name": "microelement/microelement",
-    "description": "Microelement CLI tool",
+    "description": "Microframework PHP",
     "type": "library",
     "license": "MIT",
     "autoload": {
