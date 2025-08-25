@@ -9,9 +9,7 @@
             "Microelement\\": "src/"
         }
     },
-    "bin": [
-        "bin/microelement"
-    ],
+    "bin": ["bin/microelement"],
     "require": {
         "php": ">=8.0",
         "symfony/console": "^6.0 || ^7.0"
