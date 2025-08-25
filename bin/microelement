@@ -1,11 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-// Intentamos cargar el autoload local del proyecto
+// Intentamos cargar el autoload de varias rutas posibles
 $autoloadFiles = [
-    __DIR__ . '/../vendor/autoload.php',                      // si es un proyecto normal
-    __DIR__ . '/../../../autoload.php',                       // si está instalado como dependencia
-    getenv('COMPOSER_HOME') . '/vendor/autoload.php',         // si se instaló globalmente
+    __DIR__ . '/../vendor/autoload.php',                      // instalación local
+    __DIR__ . '/../../../autoload.php',                       // instalación como dependencia
+    getenv('COMPOSER_HOME') . '/vendor/autoload.php',         // instalación global
 ];
 
 $loaded = false;
@@ -18,7 +18,7 @@ foreach ($autoloadFiles as $file) {
 }
 
 if (!$loaded) {
-    fwrite(STDERR, "No se pudo cargar autoload.php\n");
+    fwrite(STDERR, "No se pudo cargar autoload.php de Composer\n");
     exit(1);
 }
 
